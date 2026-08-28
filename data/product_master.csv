@@ -1,0 +1,91 @@
+product_id,category,category_label,subcategory,base_price,base_quantity_weekly,unit_cost,elasticity_true,veblen_flag,energy_share,materials_share,transport_share,other_cost_share
+P0001,fmcg,Largo Consumo / FMCG,bevande,12.06,2286.3,8.7,-1.471,False,0.124,0.544,0.164,0.168
+P0002,fmcg,Largo Consumo / FMCG,bevande,3.67,2334.2,2.29,-1.528,False,0.261,0.506,0.117,0.117
+P0003,fmcg,Largo Consumo / FMCG,alimentare_confezionato,4.95,2767.3,2.79,-1.493,False,0.258,0.49,0.103,0.149
+P0004,fmcg,Largo Consumo / FMCG,bevande,13.61,3697.7,8.02,-1.614,False,0.111,0.339,0.152,0.398
+P0005,fmcg,Largo Consumo / FMCG,bevande,11.68,4483.9,7.19,-2.085,False,0.217,0.347,0.069,0.366
+P0006,fmcg,Largo Consumo / FMCG,cura_persona,4.95,3246.3,3.16,-1.61,False,0.308,0.501,0.108,0.083
+P0007,fmcg,Largo Consumo / FMCG,cura_persona,5.75,3299.1,3.32,-1.562,False,0.102,0.497,0.15,0.252
+P0008,fmcg,Largo Consumo / FMCG,bevande,12.15,2369.6,8.06,-1.896,False,0.129,0.467,0.121,0.284
+P0009,fmcg,Largo Consumo / FMCG,cura_persona,9.35,3642.0,6.33,-1.595,False,0.24,0.376,0.055,0.33
+P0010,fmcg,Largo Consumo / FMCG,cura_persona,4.79,2160.2,3.45,-2.197,False,0.115,0.37,0.094,0.421
+P0011,fmcg,Largo Consumo / FMCG,cura_persona,10.6,2777.5,7.5,-1.581,False,0.202,0.504,0.075,0.22
+P0012,fmcg,Largo Consumo / FMCG,alimentare_confezionato,3.17,3464.8,2.04,-1.964,False,0.225,0.338,0.154,0.282
+P0013,fmcg,Largo Consumo / FMCG,cura_persona,7.8,2045.8,4.76,-1.828,False,0.19,0.322,0.068,0.42
+P0014,fmcg,Largo Consumo / FMCG,bevande,13.81,3370.6,8.33,-1.345,False,0.295,0.479,0.117,0.109
+P0015,fmcg,Largo Consumo / FMCG,cura_persona,5.54,862.6,4.05,-1.506,False,0.151,0.376,0.137,0.336
+P0016,fmcg,Largo Consumo / FMCG,alimentare_confezionato,13.14,3615.1,9.11,-1.719,False,0.257,0.446,0.147,0.15
+P0017,fmcg,Largo Consumo / FMCG,alimentare_confezionato,3.1,2190.4,1.73,-1.324,False,0.182,0.336,0.066,0.416
+P0018,fmcg,Largo Consumo / FMCG,cura_persona,4.22,4307.7,2.81,-2.282,False,0.248,0.306,0.194,0.253
+P0019,fmcg,Largo Consumo / FMCG,cura_persona,8.27,3715.8,4.69,-1.101,False,0.223,0.534,0.136,0.107
+P0020,fmcg,Largo Consumo / FMCG,cura_persona,5.47,1840.2,3.58,-2.014,False,0.105,0.507,0.184,0.204
+P0021,fmcg,Largo Consumo / FMCG,bevande,3.82,2765.0,2.19,-1.97,False,0.17,0.465,0.159,0.206
+P0022,fmcg,Largo Consumo / FMCG,bevande,3.4,4269.8,2.03,-2.138,False,0.239,0.393,0.174,0.194
+P0023,fmcg,Largo Consumo / FMCG,alimentare_confezionato,12.51,1780.3,9.26,-1.665,False,0.229,0.364,0.19,0.217
+P0024,fmcg,Largo Consumo / FMCG,alimentare_confezionato,2.58,2270.6,1.93,-1.74,False,0.287,0.523,0.184,0.006
+P0025,fmcg,Largo Consumo / FMCG,cura_persona,8.75,1775.2,6.16,-1.944,False,0.193,0.324,0.162,0.321
+P0026,fmcg,Largo Consumo / FMCG,alimentare_confezionato,14.18,1463.6,8.15,-1.197,False,0.138,0.345,0.14,0.377
+P0027,fmcg,Largo Consumo / FMCG,bevande,13.37,1278.5,8.18,-1.575,False,0.343,0.425,0.072,0.16
+P0028,fmcg,Largo Consumo / FMCG,alimentare_confezionato,4.99,1009.9,3.42,-2.518,False,0.227,0.474,0.137,0.163
+P0029,fmcg,Largo Consumo / FMCG,alimentare_confezionato,4.6,3804.7,3.19,-2.264,False,0.133,0.331,0.189,0.347
+P0030,fmcg,Largo Consumo / FMCG,cura_persona,5.91,2493.0,4.04,-1.332,False,0.172,0.531,0.054,0.243
+P0031,fmcg,Largo Consumo / FMCG,alimentare_confezionato,9.22,3097.4,5.26,-1.768,False,0.205,0.542,0.139,0.114
+P0032,fmcg,Largo Consumo / FMCG,bevande,12.46,2404.8,8.81,-1.69,False,0.127,0.507,0.17,0.196
+P0033,fmcg,Largo Consumo / FMCG,bevande,5.02,2668.3,3.37,-1.985,False,0.194,0.406,0.148,0.252
+P0034,fmcg,Largo Consumo / FMCG,bevande,7.9,1492.2,4.72,-2.184,False,0.304,0.326,0.06,0.31
+P0035,fmcg,Largo Consumo / FMCG,alimentare_confezionato,9.73,1069.5,6.95,-2.145,False,0.136,0.53,0.075,0.259
+P0036,fmcg,Largo Consumo / FMCG,alimentare_confezionato,4.0,942.0,2.22,-1.893,False,0.144,0.313,0.139,0.404
+P0037,fmcg,Largo Consumo / FMCG,cura_persona,10.85,2098.2,6.66,-1.781,False,0.319,0.513,0.057,0.112
+P0038,fmcg,Largo Consumo / FMCG,alimentare_confezionato,5.08,1498.6,3.37,-1.665,False,0.112,0.393,0.129,0.366
+P0039,fmcg,Largo Consumo / FMCG,alimentare_confezionato,3.32,3926.6,1.86,-1.632,False,0.125,0.511,0.185,0.179
+P0040,fmcg,Largo Consumo / FMCG,bevande,12.43,3702.2,8.43,-1.902,False,0.134,0.434,0.127,0.305
+P0041,durevoli,Beni Durevoli / Voluttuari,elettronica_consumo,1050.45,345.5,711.17,-2.712,False,0.167,0.335,0.122,0.377
+P0042,durevoli,Beni Durevoli / Voluttuari,elettrodomestici,394.2,283.8,265.41,-2.964,False,0.195,0.471,0.095,0.239
+P0043,durevoli,Beni Durevoli / Voluttuari,elettronica_consumo,1146.3,638.7,798.03,-2.211,False,0.234,0.512,0.148,0.106
+P0044,durevoli,Beni Durevoli / Voluttuari,arredamento,709.36,455.5,466.5,-2.305,False,0.151,0.474,0.179,0.197
+P0045,durevoli,Beni Durevoli / Voluttuari,arredamento,288.71,443.5,178.72,-1.89,False,0.121,0.534,0.071,0.274
+P0046,durevoli,Beni Durevoli / Voluttuari,arredamento,990.93,430.1,749.66,-3.149,False,0.337,0.363,0.139,0.162
+P0047,durevoli,Beni Durevoli / Voluttuari,arredamento,249.8,444.6,158.44,-2.222,False,0.243,0.416,0.128,0.212
+P0048,durevoli,Beni Durevoli / Voluttuari,arredamento,989.21,364.4,712.15,-3.096,False,0.13,0.329,0.063,0.478
+P0049,durevoli,Beni Durevoli / Voluttuari,elettrodomestici,840.76,316.9,634.66,-2.393,False,0.183,0.525,0.164,0.128
+P0050,durevoli,Beni Durevoli / Voluttuari,elettronica_consumo,532.4,249.5,336.22,-2.608,False,0.334,0.409,0.107,0.149
+P0051,durevoli,Beni Durevoli / Voluttuari,elettronica_consumo,916.17,403.8,721.23,-2.699,False,0.22,0.394,0.198,0.188
+P0052,durevoli,Beni Durevoli / Voluttuari,arredamento,1148.75,122.8,884.66,-2.903,False,0.13,0.447,0.153,0.27
+P0053,durevoli,Beni Durevoli / Voluttuari,elettrodomestici,162.92,340.0,124.65,-3.426,False,0.215,0.411,0.095,0.279
+P0054,durevoli,Beni Durevoli / Voluttuari,arredamento,970.36,117.7,775.71,-2.773,False,0.171,0.509,0.066,0.254
+P0055,durevoli,Beni Durevoli / Voluttuari,elettrodomestici,1199.06,476.7,875.34,-2.42,False,0.324,0.307,0.086,0.282
+P0056,durevoli,Beni Durevoli / Voluttuari,elettronica_consumo,965.61,174.4,755.23,-2.539,False,0.109,0.301,0.058,0.532
+P0057,durevoli,Beni Durevoli / Voluttuari,elettronica_consumo,786.22,564.5,509.24,-3.967,False,0.114,0.5,0.189,0.196
+P0058,durevoli,Beni Durevoli / Voluttuari,arredamento,883.03,588.1,536.91,-3.185,False,0.131,0.426,0.162,0.281
+P0059,durevoli,Beni Durevoli / Voluttuari,elettrodomestici,811.51,596.6,512.1,-3.54,False,0.148,0.368,0.156,0.328
+P0060,durevoli,Beni Durevoli / Voluttuari,arredamento,792.12,81.4,572.91,-2.563,False,0.321,0.477,0.076,0.126
+P0061,durevoli,Beni Durevoli / Voluttuari,elettrodomestici,246.31,164.9,196.06,-3.127,False,0.296,0.459,0.136,0.109
+P0062,durevoli,Beni Durevoli / Voluttuari,elettronica_consumo,1143.33,241.1,818.17,-2.266,False,0.262,0.535,0.072,0.13
+P0063,durevoli,Beni Durevoli / Voluttuari,elettrodomestici,683.77,307.5,475.11,-1.762,False,0.134,0.37,0.096,0.401
+P0064,durevoli,Beni Durevoli / Voluttuari,elettrodomestici,791.54,456.6,540.11,-3.217,False,0.154,0.447,0.098,0.301
+P0065,durevoli,Beni Durevoli / Voluttuari,elettrodomestici,187.86,316.7,130.53,-2.247,False,0.243,0.441,0.155,0.16
+P0066,durevoli,Beni Durevoli / Voluttuari,elettrodomestici,835.05,250.7,632.54,-2.268,False,0.208,0.457,0.104,0.232
+P0067,durevoli,Beni Durevoli / Voluttuari,elettronica_consumo,688.38,522.6,535.06,-2.51,False,0.226,0.43,0.17,0.174
+P0068,durevoli,Beni Durevoli / Voluttuari,elettronica_consumo,1029.25,365.7,641.4,-2.467,False,0.31,0.314,0.092,0.284
+P0069,durevoli,Beni Durevoli / Voluttuari,elettrodomestici,500.84,158.1,331.94,-3.716,False,0.104,0.507,0.178,0.211
+P0070,durevoli,Beni Durevoli / Voluttuari,elettrodomestici,311.29,434.7,194.23,-4.282,False,0.322,0.521,0.157,0.0
+P0071,premium,Premium / Posizionale,elettronica_alta_gamma,1139.6,130.7,445.67,-0.819,False,0.103,0.352,0.129,0.416
+P0072,premium,Premium / Posizionale,moda_lusso,747.95,156.4,334.95,-1.088,False,0.348,0.335,0.117,0.2
+P0073,premium,Premium / Posizionale,orologeria_gioielli,1359.95,25.4,545.43,-0.597,False,0.138,0.345,0.186,0.331
+P0074,premium,Premium / Posizionale,moda_lusso,928.7,62.1,323.22,-0.241,False,0.121,0.361,0.177,0.342
+P0075,premium,Premium / Posizionale,moda_lusso,2021.49,124.0,776.33,0.047,True,0.235,0.385,0.177,0.204
+P0076,premium,Premium / Posizionale,elettronica_alta_gamma,2375.29,159.1,833.63,-0.823,False,0.313,0.385,0.125,0.177
+P0077,premium,Premium / Posizionale,moda_lusso,1734.81,29.7,571.99,-0.566,False,0.144,0.385,0.079,0.392
+P0078,premium,Premium / Posizionale,moda_lusso,2804.14,89.2,873.51,0.011,True,0.276,0.458,0.197,0.069
+P0079,premium,Premium / Posizionale,moda_lusso,1974.97,94.3,794.5,-0.555,False,0.335,0.488,0.177,0.0
+P0080,premium,Premium / Posizionale,moda_lusso,2277.52,87.8,821.32,-0.606,False,0.346,0.372,0.16,0.122
+P0081,premium,Premium / Posizionale,moda_lusso,2324.96,71.6,638.84,-1.212,False,0.222,0.546,0.12,0.111
+P0082,premium,Premium / Posizionale,orologeria_gioielli,1411.26,149.0,376.75,-0.951,False,0.331,0.506,0.056,0.108
+P0083,premium,Premium / Posizionale,elettronica_alta_gamma,1306.3,20.0,355.13,-0.606,False,0.293,0.516,0.161,0.029
+P0084,premium,Premium / Posizionale,orologeria_gioielli,432.2,52.2,161.81,0.106,True,0.269,0.307,0.11,0.313
+P0085,premium,Premium / Posizionale,elettronica_alta_gamma,2718.21,127.9,808.75,-1.665,False,0.313,0.375,0.139,0.173
+P0086,premium,Premium / Posizionale,elettronica_alta_gamma,1042.03,165.1,299.6,-0.468,False,0.279,0.502,0.2,0.019
+P0087,premium,Premium / Posizionale,elettronica_alta_gamma,1100.18,82.2,305.15,-0.454,False,0.275,0.449,0.109,0.167
+P0088,premium,Premium / Posizionale,orologeria_gioielli,1641.67,34.8,530.39,-1.141,False,0.104,0.413,0.145,0.337
+P0089,premium,Premium / Posizionale,elettronica_alta_gamma,1226.89,84.4,542.09,-0.707,False,0.171,0.524,0.085,0.219
+P0090,premium,Premium / Posizionale,moda_lusso,2754.47,103.3,1097.56,-0.386,False,0.175,0.36,0.098,0.366
