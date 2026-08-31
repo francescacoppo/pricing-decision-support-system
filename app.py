@@ -145,7 +145,9 @@ def recommended_pt_for_category(category, shock_pct):
 # ---------------------------------------------------------------------------
 st.markdown(f"""
 <style>
-    .block-container {{ padding-top: 1.6rem; max-width: 1200px; }}
+    header[data-testid="stHeader"] {{ display: none; }}
+    #MainMenu {{ visibility: hidden; }}
+    .block-container {{ padding-top: 1.2rem; max-width: 1200px; }}
     .main-title {{ color: {COLOR_PRIMARY}; font-size: 2.0em; font-weight: 700;
         margin-bottom: 0.15em; letter-spacing: -0.5px; }}
     .subtitle {{ color: {COLOR_SECONDARY}; font-size: 1.0em; margin-bottom: 1.0em; }}
@@ -178,7 +180,7 @@ st.markdown(f"""
         padding:18px 22px; text-align:center; }}
     .flow-label {{ font-size:0.78em; color:{COLOR_SECONDARY}; text-transform:uppercase;
         letter-spacing:0.6px; }}
-    .flow-value {{ font-size:1.3em; font-weight:700; color:{COLOR_PRIMARY}; margin:4px 0 10px 0; }}
+    .flow-value {{ font-size:1.3em; font-weight:700; color:{COLOR_PRIMARY}; margin:4px 0 10px 0; white-space:nowrap; }}
     .flow-arrow {{ color:{COLOR_BORDER}; font-size:1.4em; }}
     .index-card {{ background:white; border:1px solid {COLOR_BORDER}; border-radius:8px;
         padding:20px; text-align:center; }}
@@ -241,6 +243,14 @@ scenarios = calculate_scenarios(categoria, costo_attuale, prezzo_attuale, quanti
 color_cat = CATEGORY_COLORS[categoria]
 recommended_pt = int(round(scenarios["best_pt"] * 100))
 
+def fmt_it(value, decimals=0):
+    """Formatta un numero in stile italiano: punto per le migliaia, virgola
+    per i decimali (l'opposto della formattazione inglese di default in
+    Python, che userebbe la virgola per le migliaia e confonderebbe un
+    lettore italiano)."""
+    s = f"{value:,.{decimals}f}"
+    return s.replace(",", "X").replace(".", ",").replace("X", ".")
+
 def risk_level(perdita_volumi_pct):
     if perdita_volumi_pct < 5:
         return "BASSO", COLOR_POSITIVE
@@ -276,7 +286,7 @@ st.markdown(f"""
 
 x1, x2, x3, x4 = st.columns(4)
 x1.markdown(f'<div class="kpi-card"><div class="kpi-label">Margine atteso</div>'
-            f'<div class="kpi-value">€ {margine_rec:,.0f}</div>'
+            f'<div class="kpi-value">€ {fmt_it(margine_rec)}</div>'
             f'<div class="kpi-delta delta-neutral">al {recommended_pt}% consigliato</div></div>',
             unsafe_allow_html=True)
 x2.markdown(f'<div class="kpi-card"><div class="kpi-label">Variazione prezzo</div>'
@@ -364,9 +374,11 @@ with tab_config:
         st.markdown('<div style="text-align:center; padding-top:35px;" class="flow-arrow">&rarr;</div>',
                      unsafe_allow_html=True)
     with f9:
-        st.markdown(f'<div class="flow-box" style="border-top:3px solid {COLOR_ACCENT};">'
-                     f'<div class="flow-label">Nuovo costo unitario</div>'
-                     f'<div class="flow-value">€ {costo_attuale:.2f} &rarr; € {scenarios["cost1"]:.2f}</div>'
+        st.markdown(f'<div class="flow-box" style="border:2px solid {COLOR_ACCENT}; '
+                     f'background-color:#FFF8F3;">'
+                     f'<div class="flow-label" style="font-weight:700; color:{COLOR_ACCENT};">NUOVO COSTO UNITARIO</div>'
+                     f'<div class="flow-value" style="font-size:1.15em; margin-top:6px;">'
+                     f'€ {costo_attuale:.2f} &rarr; € {scenarios["cost1"]:.2f}</div>'
                      f'<div class="flow-label">shock ponderato: +{shock_costo_ponderato*100:.1f}%</div></div>',
                      unsafe_allow_html=True)
 
@@ -457,9 +469,9 @@ with tab_sim:
         rows.append({
             "Pass-through": f"{pt}%" + (" (consigliato)" if pt == recommended_pt else ""),
             "Prezzo": f"€ {scenarios['price_grid'][idx]:.2f}",
-            "Quantita": f"{scenarios['quantity_grid'][idx]:,.0f}",
-            "Margine": f"€ {scenarios['margin_grid'][idx]:,.0f}",
-            "Profitto vs consigliato": f"€ {scenarios['margin_grid'][idx] - scenarios['best_margin']:,.0f}",
+            "Quantita": fmt_it(scenarios['quantity_grid'][idx]),
+            "Margine": f"€ {fmt_it(scenarios['margin_grid'][idx])}",
+            "Profitto vs consigliato": f"€ {fmt_it(scenarios['margin_grid'][idx] - scenarios['best_margin'])}",
             "_is_best": pt == recommended_pt,
         })
     scenario_table = pd.DataFrame(rows)
@@ -534,7 +546,7 @@ with tab_decisione:
         <div class="reason-item">- La categoria {CATEGORY_LABELS[categoria]} presenta un'elasticita
             stimata di {eps:.2f} ({best_method[categoria]}).</div>
         <div class="reason-item">- {CATEGORY_ACTION_NOTE[categoria]}</div>
-        <div class="reason-item">- Il margine atteso e massimo (€ {scenarios['best_margin']:,.0f}/settimana)
+        <div class="reason-item">- Il margine atteso e massimo (€ {fmt_it(scenarios['best_margin'])}/settimana)
             con un pass-through del {recommended_pt}%.</div>
         <div class="reason-item">- La stima e basata su {N_OBS:,} osservazioni e {N_PRODUCTS} prodotti,
             validata su prodotti mai visti in allenamento.</div>
@@ -570,16 +582,16 @@ with tab_decisione:
     with col_att:
         st.markdown(f'<div class="kpi-card" style="border-top-color:{COLOR_SECONDARY}">'
                     f'<div class="kpi-label">Scenario scelto ({passthrough_rate}%)</div>'
-                    f'<div class="kpi-value">€ {s_scelto["margine"]:,.0f}</div>'
+                    f'<div class="kpi-value">€ {fmt_it(s_scelto["margine"])}</div>'
                     f'<div class="kpi-delta delta-neutral">margine/settimana</div></div>',
                     unsafe_allow_html=True)
     with col_cons:
         delta_vs_cons = s_scelto["margine"] - s_cons["margine"]
         st.markdown(f'<div class="kpi-card" style="border-top-color:{COLOR_ACCENT}">'
                     f'<div class="kpi-label">Scenario consigliato ({recommended_pt}%)</div>'
-                    f'<div class="kpi-value">€ {s_cons["margine"]:,.0f}</div>'
+                    f'<div class="kpi-value">€ {fmt_it(s_cons["margine"])}</div>'
                     f'<div class="kpi-delta {"delta-positive" if delta_vs_cons>=0 else "delta-negative"}">'
-                    f'{"+" if delta_vs_cons>=0 else ""}€ {delta_vs_cons:,.0f} rispetto alla tua scelta</div></div>',
+                    f'{"+" if delta_vs_cons>=0 else ""}€ {fmt_it(delta_vs_cons)} rispetto alla tua scelta</div></div>',
                     unsafe_allow_html=True)
 
     # --- indice di qualita della decisione + livello di rischio ---
@@ -640,7 +652,7 @@ with tab_decisione:
         col = COLOR_POSITIVE if delta_margine_flow >= 0 else COLOR_NEGATIVE
         st.markdown(f'<div class="flow-box"><div class="flow-label">Margine</div>'
                     f'<div class="flow-value" style="color:{col}">{"+" if delta_margine_flow>=0 else ""}'
-                    f'€ {delta_margine_flow:,.0f}</div></div>', unsafe_allow_html=True)
+                    f'€ {fmt_it(delta_margine_flow)}</div></div>', unsafe_allow_html=True)
     with gap2:
         st.markdown('<div style="text-align:center; padding-top:35px;" class="flow-arrow">&rarr;</div>',
                      unsafe_allow_html=True)
@@ -657,13 +669,13 @@ with tab_decisione:
         st.markdown(f'<div class="flow-box" style="border-top:3px solid {col};">'
                     f'<div class="flow-label">Profitto netto</div>'
                     f'<div class="flow-value" style="color:{col}">{"+" if delta_profitto_flow>=0 else ""}'
-                    f'€ {delta_profitto_flow:,.0f}</div></div>', unsafe_allow_html=True)
+                    f'€ {fmt_it(delta_profitto_flow)}</div></div>', unsafe_allow_html=True)
 
     if passthrough_rate == recommended_pt:
         st.caption("Stai seguendo esattamente il consiglio del modello: nessuna perdita di profitto.")
     else:
         st.caption(f"Scegliendo {passthrough_rate}% invece del {recommended_pt}% consigliato, "
-                   f"perdi € {abs(delta_profitto_flow):,.0f}/settimana rispetto all'ottimo teorico.")
+                   f"perdi € {fmt_it(abs(delta_profitto_flow))}/settimana rispetto all'ottimo teorico.")
 
 # ---------------------------------------------------------------------------
 # FOOTER
