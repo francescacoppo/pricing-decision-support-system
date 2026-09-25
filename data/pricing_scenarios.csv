@@ -1,0 +1,10 @@
+categoria,elasticita,shock_costo_pct,passthrough_SENZA_soglia,passthrough_CON_soglia,al_tetto_massimo_100pct,prezzo_consigliato,variazione_prezzo_pct,passthrough_numerico_rf,margine_no_aumento,margine_pct_no_aumento,margine_consigliato,margine_pct_consigliato
+durevoli,-2.714,0.1,1.0,1.0,True,855.67,0.0672,0.7,74345.7,0.2612,78344.7,0.3077
+durevoli,-2.714,0.2,1.0,1.0,True,909.52,0.1343,1.0,55231.3,0.1941,66385.2,0.2895
+durevoli,-2.714,0.3,1.0,0.745,False,922.17,0.1501,1.0,36116.9,0.1269,53927.3,0.2409
+fmcg,-1.782,0.1,1.0,1.0,True,7.29,0.0637,0.7,5015.3,0.2988,5450.9,0.3408
+fmcg,-1.782,0.2,1.0,0.63,False,7.41,0.0803,1.0,3945.2,0.235,4609.0,0.2919
+fmcg,-1.782,0.3,1.0,0.42,False,7.41,0.0803,1.0,2875.0,0.1713,3677.2,0.2329
+premium,-0.648,0.1,1.0,1.0,True,1580.84,0.0356,0.7,82157.1,0.6082,85019.0,0.6216
+premium,-0.648,0.2,1.0,1.0,True,1635.22,0.0712,1.0,77344.8,0.5725,83176.1,0.601
+premium,-0.648,0.3,1.0,1.0,True,1689.59,0.1069,1.0,72532.6,0.5369,81431.6,0.5816

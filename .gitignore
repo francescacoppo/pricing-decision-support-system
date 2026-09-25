@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Ambiente virtuale
+venv/
+.venv/
+
+# Streamlit
+.streamlit/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db

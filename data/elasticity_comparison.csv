@@ -1,0 +1,4 @@
+,elasticita_vera (simulata),regressione_log_log,random_forest (partial dependence),errore_assoluto_loglog,errore_assoluto_rf
+durevoli,-2.781,-2.714,-2.177,0.067,0.604
+fmcg,-1.768,-1.782,-1.66,0.015,0.108
+premium,-0.636,-0.101,-0.648,0.535,0.012
